@@ -37,10 +37,10 @@ class ValidationMessages
 	 {
 		 $this->lang = App::getLocale();
 
-		if(! file_exists(resource_path('lang/validation/' . $this->lang . '.php'))){
+		if(! file_exists(base_path('lang/' . $this->lang . '/validation.php'))){
             $this->config = include __DIR__ . '/../lang/' . $this->lang . '.php';
         } else {
-            $this->config = include resource_path('lang/validation/' . $this->lang . '.php');
+            $this->config = include resource_path(base_path('lang/' . $this->lang . '/validation.php'));
         }
 	 }
 
