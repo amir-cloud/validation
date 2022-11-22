@@ -55,8 +55,6 @@ class PersianValidationServiceProvider extends ServiceProvider
         foreach($this->validationRules as $name => $method)
         {
             Validator::extend($name, 'ValidationRules@'.$method);
-
-            Validator::replacer($name, 'ValidationMessages@Msg');
         }
 
     }
